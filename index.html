@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="d-flex flex-column align-items-center mt-5">
+      <h1 class="mt-4 display-2">Rock, Paper, Scissors</h1>
+      <div class="d-flex w-100 justify-content-around img-container">
+        <div>
+          <div class="display-5 text-center mb-4">Computer</div>
+          <div class="animate">
+            <img src="img/rock-pc.png" class="choice-pc hide appear" />
+            <img src="img/paper-pc.png" class="choice-pc hide" />
+            <img src="img/scissor-pc.png" class="choice-pc hide" />
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="display-5 text-center mb-4">You</div>
+          <div class="animate">
+            <img src="img/rock.png" class="choice hide appear" />
+            <img src="img/paper.png" class="choice hide" />
+            <img src="img/scissor.png" class="choice hide" />
+          </div>
+
+          <select
+            id="your-choice"
+            class="rounded mt-5 p-1"
+            onchange="playerChoice(this.value)"
+          >
+            <option value="0">Rock</option>
+            <option value="1">Paper</option>
+            <option value="2">Scissors</option>
+          </select>
+        </div>
+      </div>
+      <button id="play" class="btn btn-custom" onclick="result()">
+        Click to Play
+      </button>
+      <div id="result" class="hide appear position-fixed display-5"></div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+</html>
